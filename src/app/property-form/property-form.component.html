@@ -1,0 +1,63 @@
+<mat-card class="property-card">
+  <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+    <mat-card-header>
+      <mat-card-title>Add New Property</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="form-row">
+        <mat-form-field>
+          <input matInput formControlName="title" placeholder="Title" required>
+        </mat-form-field>
+    
+        <mat-form-field>
+          <input matInput formControlName="area" placeholder="Area (sq ft)" required type="number">
+        </mat-form-field>
+      </div>
+        <div class="form-row">
+        <mat-form-field>
+          <input matInput formControlName="bedrooms" placeholder="Bedrooms" required type="number">
+        </mat-form-field>
+     
+        <mat-form-field>
+          <input matInput formControlName="bathrooms" placeholder="Bathrooms" required type="number">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field>
+          <input matInput formControlName="price" placeholder="Price" required type="number">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput formControlName="amenities" placeholder="Amenities" required>
+        </mat-form-field>
+      </div>
+     
+
+      <div class="form-row">
+        <mat-form-field>
+          <input matInput formControlName="city" placeholder="City" required>
+        </mat-form-field>
+     
+        <mat-form-field>
+          <input matInput formControlName="state" placeholder="State" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field>
+          <textarea matInput formControlName="address" placeholder="Address" required></textarea>
+
+        </mat-form-field>
+       
+          <mat-form-field>
+            <textarea matInput formControlName="description" placeholder="Description" required></textarea>
+          </mat-form-field>
+        </div>
+   
+    </mat-card-content>
+  
+    <mat-card-actions>
+      <button mat-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

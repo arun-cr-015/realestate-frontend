@@ -1,0 +1,14 @@
+<div *ngIf="properties">
+  <div *ngFor="let property of properties">
+    <h2>{{ property.title }}</h2>
+    <p>{{ property.description }}</p>
+    <button mat-raised-button color="primary" (click)="showInterest(property._id)">I'm Interested</button>
+    <button mat-raised-button color="accent" (click)="likeProperty(property._id)">Like ({{ property.likes }})</button>
+  </div>
+</div>
+
+<div class="pagination">
+  <button mat-button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>Page {{ currentPage }} of {{ totalPages }}</span>
+  <button mat-button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
