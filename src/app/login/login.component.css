@@ -91,3 +91,12 @@
   color: #423836;
   text-decoration: none;
 }
+button[type="submit"]:disabled {
+  background-color: #ccc; 
+  color: #666; 
+  cursor: not-allowed; 
+}
+
+button[type="submit"]:disabled:hover {
+  background-color: #ccc; 
+}
