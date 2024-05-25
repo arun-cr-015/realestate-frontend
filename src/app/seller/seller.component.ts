@@ -199,6 +199,14 @@ export class SellerComponent implements OnInit {
   }
 
   deleteProperty(property: Property) {
-    this.dataSource.data = this.dataSource.data.filter(item => item !== property);
+    this.apiService.deleteProperty(property._id).subscribe(
+      () => {
+        this.loadProperties();
+        this.dataSource.data = this.dataSource.data.filter(item => item !== property);
+      },
+      (error) => {
+        console.error('Error deleting property:', error);
+      }
+    );
   }
 }
