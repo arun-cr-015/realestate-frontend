@@ -83,3 +83,8 @@
   color: #423836;
   text-decoration: none;
 }
+.form-actions button:disabled {
+  background-color: #ccc;
+  color: #666; 
+  cursor: not-allowed; 
+}
