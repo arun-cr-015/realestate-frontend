@@ -1,0 +1,105 @@
+.property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.properties-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.property-row {
+  width: calc(50% - 10px); 
+  display: flex;
+}
+
+.property-card {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.property-card:hover {
+  transform: scale(1.02);
+}
+
+.property-card-content {
+  display: flex;
+  width: 100%;
+}
+
+.property-image {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.property-details {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.property-details mat-card-header {
+  padding: 0;
+}
+
+.property-details mat-card-content {
+  padding: 0;
+  flex-grow: 1;
+}
+
+.property-details mat-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.action-icon {
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.action-icon:hover {
+  color: #ff4081; 
+  transform: scale(1.2);
+}
+
+.likes-count {
+  font-size: 16px;
+  color: #757575;
+}
+
+.showInterest {
+  background-color: #423836;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagination button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

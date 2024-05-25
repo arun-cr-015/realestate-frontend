@@ -1,8 +1,93 @@
-.login-card {
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.container {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+.image-section {
+  flex: 1;
+  background: url('https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+}
+
+.image-section h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.image-section p {
+  margin: 5px 0 20px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form horizontally */
+  justify-content: center; /* Center the form vertically */
+  padding: 40px;
+}
+
+.form-section h1 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group .form-field {
+  width: 100%;
   
+}
+
+
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+
+.logo {
+  font-family: 'Brush Script MT', cursive;
+}
+.form-actions {
+  text-align: center;
+}
+.logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 48px;
+ 
+}
+
+.form-actions button {
+  background-color: #423836;
+  color: white;
+  border: none;
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.form-actions a {
+  display: block;
+  margin-top: 10px;
+  color: #423836;
+  text-decoration: none;
+}

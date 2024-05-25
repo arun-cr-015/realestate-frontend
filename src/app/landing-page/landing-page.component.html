@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<div class="user-home" *ngIf="role === 'Buyer'">
+  <div class="banner-container">
+    <img [src]="bannerImageUrl" alt="Banner Image" class="banner-image">
+  </div>
+  <app-property-list></app-property-list>
+</div>
+
+<div class="seller-home" *ngIf="role === 'Seller'">
+  <app-seller></app-seller>
+</div>

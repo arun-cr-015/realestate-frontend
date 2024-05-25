@@ -1,63 +1,56 @@
-<mat-card class="property-card">
+<div class="property-card">
   <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
-    <mat-card-header>
-      <mat-card-title>Add New Property</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
+    <div class="form-header">
+      <h2>{{ data ? 'Edit Property' : 'Add New Property' }}</h2>
+    </div>
+    <div class="form-content">
       <div class="form-row">
         <mat-form-field>
           <input matInput formControlName="title" placeholder="Title" required>
         </mat-form-field>
-    
+        <mat-form-field>
+          <input matInput formControlName="price" placeholder="Price" required type="number">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="contactInformation" placeholder="Contact Information" required>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
         <mat-form-field>
           <input matInput formControlName="area" placeholder="Area (sq ft)" required type="number">
         </mat-form-field>
-      </div>
-        <div class="form-row">
         <mat-form-field>
           <input matInput formControlName="bedrooms" placeholder="Bedrooms" required type="number">
         </mat-form-field>
-     
         <mat-form-field>
           <input matInput formControlName="bathrooms" placeholder="Bathrooms" required type="number">
         </mat-form-field>
       </div>
       <div class="form-row">
-        <mat-form-field>
-          <input matInput formControlName="price" placeholder="Price" required type="number">
-        </mat-form-field>
-      
-        <mat-form-field>
-          <input matInput formControlName="amenities" placeholder="Amenities" required>
-        </mat-form-field>
-      </div>
-     
-
-      <div class="form-row">
-        <mat-form-field>
-          <input matInput formControlName="city" placeholder="City" required>
-        </mat-form-field>
-     
-        <mat-form-field>
-          <input matInput formControlName="state" placeholder="State" required>
+        <mat-form-field class="full-width">
+          <input matInput formControlName="nearbyHospitals" placeholder="Nearby Hospitals" required>
+        </mat-form-field >
+        <mat-form-field class='full-width'>
+          <input matInput formControlName="nearbyColleges" placeholder="Nearby Colleges" required>
         </mat-form-field>
       </div>
-
       <div class="form-row">
-        <mat-form-field>
+        <mat-form-field class="full-width">
+          <textarea matInput formControlName="description" placeholder="Description" required></textarea>
+        </mat-form-field>
+        <mat-form-field class="full-width">
           <textarea matInput formControlName="address" placeholder="Address" required></textarea>
-
         </mat-form-field>
-       
-          <mat-form-field>
-            <textarea matInput formControlName="description" placeholder="Description" required></textarea>
-          </mat-form-field>
-        </div>
-   
-    </mat-card-content>
-  
-    <mat-card-actions>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="full-width">
+          <input matInput formControlName="photos" placeholder="Photos (URLs)" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-actions">
       <button mat-button color="primary" type="submit">Submit</button>
-    </mat-card-actions>
+      <button mat-button type="button" (click)="onCancel()">Cancel</button>
+    </div>
   </form>
-</mat-card>
+</div>

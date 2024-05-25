@@ -7,12 +7,12 @@ import { RegisterComponent } from './register/register.component';
 
 import { AuthGuard } from './auth.guard';
 import { SellerComponent } from './seller/seller.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'properties', component: PropertyListComponent },
-  { path: 'add-property', component: PropertyFormComponent, canActivate: [AuthGuard] },
+  { path: 'properties', component: LandingPageComponent},
   { path: 'seller', component: SellerComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/properties', pathMatch: 'full' }
 ];

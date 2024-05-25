@@ -1,0 +1,29 @@
+
+.custom-toolbar {
+  background-color: white !important;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 38px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spacer {
+  flex: 1  auto;
+}
+
+.logout-button {
+  font-weight: bold;
+  color: #423836;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

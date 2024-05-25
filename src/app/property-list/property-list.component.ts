@@ -2,17 +2,21 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
+import { MatDialog } from '@angular/material/dialog';
+import { SellerInfoComponent } from '../seller-info/seller-info.component';
 
 @Component({
   selector: 'app-property-list',
-  templateUrl: './property-list.component.html'
+  templateUrl: './property-list.component.html',
+  styleUrls:['./property-list.component.css']
 })
 export class PropertyListComponent implements OnInit {
-  properties: any[] = [];
+  properties: any[] ;
+  
   currentPage = 1;
   totalPages = 1;
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router,public dialog: MatDialog) {}
 
   ngOnInit() {
     this.loadProperties();
@@ -36,10 +40,13 @@ export class PropertyListComponent implements OnInit {
       this.router.navigate(['/login']);
       return;
     }
-
-    this.apiService.showInterest(propertyId).subscribe(
-      () => {
-        alert('Interest shown and email sent to buyer');
+    const userId=JSON.parse(localStorage.getItem('user'))._id
+    this.apiService.showInterest(propertyId,userId).subscribe(
+      (data) => {
+        const dialogRef = this.dialog.open(SellerInfoComponent, {
+          width: '400px', 
+          data: { seller: data } 
+        });
       },
       (error) => {
         alert('Error showing interest');
@@ -50,7 +57,7 @@ export class PropertyListComponent implements OnInit {
   likeProperty(propertyId: string) {
     this.apiService.likeProperty(propertyId).subscribe(
       () => {
-        this.loadProperties(); // Reload properties to update like count
+        this.loadProperties(); 
       },
       (error) => {
         alert('Error liking property');

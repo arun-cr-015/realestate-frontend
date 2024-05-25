@@ -1,2 +1,43 @@
-<p>seller works!</p>
-<a routerLink="/add-property">Add</a>
+<div class="property-list">
+   
+    <button mat-raised-button color="primary" class="add-product-button" (click)="addProperty()">
+      Add Product
+    </button>
+  
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+        <mat-cell *matCellDef="let property">{{ property.title }}</mat-cell>
+      </ng-container>
+  
+   
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+        <mat-cell *matCellDef="let property">{{ property.description }}</mat-cell>
+      </ng-container>
+  
+    
+      <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+        <mat-cell *matCellDef="let property">{{ property.price }}</mat-cell>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+        <mat-cell *matCellDef="let property">
+          <button mat-icon-button color="primary" (click)="editProperty(property)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteProperty(property)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  

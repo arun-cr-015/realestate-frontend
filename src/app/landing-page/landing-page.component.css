@@ -1,0 +1,49 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.user-home {
+  padding: 20px;
+  background-color: #f9f9f9; 
+}
+
+
+.banner-container {
+  width: 100%;
+  height: 320px; 
+  overflow: hidden;
+  margin-bottom: 20px; 
+  position: relative; 
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+app-property-list {
+  display: block;
+  padding: 10px;
+  background-color: #f9f9f9;
+  
+   
+}
+
+
+.seller-home {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+app-seller {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
