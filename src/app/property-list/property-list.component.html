@@ -9,8 +9,8 @@
               <mat-card-title>{{ property.title }}</mat-card-title>
             </mat-card-header>
             <mat-card-content>
-              <p>Address</p>
-              <p>{{property.address}}</p>
+              <p>Address:{{property.address}}</p>
+              <p class="property-rent">Rent: {{ property.price | currency:'INR' }}</p>
               <p>{{ property.description }}</p>
             </mat-card-content>
             <mat-card-actions>

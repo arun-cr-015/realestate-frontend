@@ -14,6 +14,11 @@
   width: calc(50% - 10px); 
   display: flex;
 }
+.property-rent {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #da3d3d; /* Change this color to whatever you prefer */
+}
 
 .property-card {
   width: 100%;
