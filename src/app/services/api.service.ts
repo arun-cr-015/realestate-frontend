@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:5000/api';
+  private apiUrl = 'https://rentify-app-a37f.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 

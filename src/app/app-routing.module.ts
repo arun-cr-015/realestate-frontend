@@ -12,7 +12,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'properties', component: LandingPageComponent},
+  { path: 'properties', component: LandingPageComponent ,canActivate: [AuthGuard]},
   { path: 'seller', component: SellerComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
