@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://rentify-app-a37f.onrender.com/api';
+  private apiUrl = 'https://realestate-backend-rqku.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 
@@ -57,7 +57,7 @@ export class ApiService {
   }
 
   showInterest(propertyId: string,userId:string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/properties/interest/${propertyId}`, userId)
+    return this.http.post(`${this.apiUrl}/properties/interest/${propertyId}/${userId}`,userId)
       .pipe(catchError(this.handleError));
   }
 }
