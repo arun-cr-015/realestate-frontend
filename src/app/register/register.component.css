@@ -1,11 +1,12 @@
-
 .container {
   display: flex;
+  flex-direction: row;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 100vh;
 }
+
 .image-section {
   flex: 1;
   background: url('https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
@@ -16,57 +17,64 @@
   padding: 20px;
   color: white;
 }
+
 .image-section h2 {
   margin: 0;
   font-size: 1.5em;
 }
-.logo {
-  font-family: 'Brush Script MT', cursive;
-}
+
 .image-section p {
   margin: 5px 0 20px;
 }
+
 .form-section {
   flex: 1;
-  padding: 150px 40px 40px 40px ;
+  padding: 150px 40px 40px 40px;
 }
+
 .form-section h1 {
   margin-bottom: 20px;
   font-size: 1.5em;
   text-align: center;
   color: #333;
 }
+
 .form-group {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
+
 .form-group .form-field {
   width: 48%;
 }
-.form-group.full-width {
-  flex-direction: column;
-}
+
 .form-group.full-width .form-field {
   width: 100%;
 }
+
 .form-field label {
   display: block;
   margin-bottom: 5px;
   color: #333;
 }
-.form-field input, .form-field select {
+
+.form-field input,
+.form-field select {
   width: 100%;
-  
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 .form-field input[type="password"] {
   font-family: 'Roboto', sans-serif;
 }
+
 .form-actions {
   text-align: center;
 }
+
 .form-actions button {
   background-color: #423836;
   color: white;
@@ -77,14 +85,53 @@
   cursor: pointer;
   font-size: 1em;
 }
+
 .form-actions a {
   display: block;
   margin-top: 10px;
   color: #423836;
   text-decoration: none;
 }
+
 .form-actions button:disabled {
   background-color: #ccc;
-  color: #666; 
-  cursor: not-allowed; 
+  color: #666;
+  cursor: not-allowed;
+}
+
+@media (max-width: 468px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-section {
+    height: 200px;
+    padding: 10px;
+  }
+
+  .image-section h2 {
+    font-size: 1.2em;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-section h1 {
+    font-size: 1.2em;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-group .form-field {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
 }

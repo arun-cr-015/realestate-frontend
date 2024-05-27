@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToastrModule } from 'ngx-toastr';
 import { SellerInfoComponent } from './seller-info/seller-info.component';
+import { MatBadgeModule } from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { SellerInfoComponent } from './seller-info/seller-info.component';
     MatIconModule,
     MatToolbarModule,
     MatDialogModule,
+    MatBadgeModule,
     ToastrModule.forRoot(),
     JwtModule.forRoot({
       config: {

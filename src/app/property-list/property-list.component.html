@@ -15,8 +15,8 @@
             </mat-card-content>
             <mat-card-actions>
               <button class="showInterest" (click)="showInterest(property._id)">Show Interest</button>
-              <mat-icon class="action-icon" color="accent" (click)="likeProperty(property._id)">favorite</mat-icon>
-              <span class="likes-count">{{ property.likes }}</span>
+              <mat-icon [matBadge]="property.likes"  matBadgeSize="small" class="action-icon" color="accent" (click)="likeProperty(property._id)">favorite</mat-icon>
+              
             </mat-card-actions>
           </div>
         </div>

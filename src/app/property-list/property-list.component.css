@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
 }
 
 .properties-container {
@@ -14,10 +15,11 @@
   width: calc(50% - 10px); 
   display: flex;
 }
+
 .property-rent {
   font-size: 1.2em;
   font-weight: bold;
-  color: #da3d3d; /* Change this color to whatever you prefer */
+  color: #da3d3d; 
 }
 
 .property-card {
@@ -74,6 +76,7 @@
   cursor: pointer;
   font-size: 24px;
   transition: color 0.3s, transform 0.3s;
+  position: relative;
 }
 
 .action-icon:hover {
@@ -107,4 +110,37 @@
 .pagination button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (max-width: 468px) {
+  .property-row {
+    width: 100%;
+  }
+
+  .property-card-content {
+    flex-direction: column;
+  }
+
+  .property-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  .property-details {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .property-details mat-card-actions {
+   
+  
+   
+  }
+
+  .showInterest {
+    width: 80%;
+  }
 }
